@@ -1,0 +1,53 @@
+#uplading_img{
+    position: absolute;
+    top: 50px;
+    width: 565px;
+    margin:0;
+}
+.uplading_img1{
+    float: left;
+    width: 260px;
+    height: 240px;
+    margin-left:20px;
+    overflow: hidden;
+    /*border-right: 1px solid #fff;*/
+}
+.uplading_img2{
+	float:right;
+    width: 260px;
+    height: 240px;
+    margin-right:20px;
+}
+.file_input1 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 262px;
+    height: 242px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 9;
+    margin:0 auto;
+    cursor: pointer;
+}
+.file_input2 {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 262px;
+    height: 242px;
+    position: absolute;
+    top: 0;
+    left: 282px;
+    z-index: 9;
+    margin:0 auto;
+}
+.uploading_logo{
+    width: 100%;
+    display: block;
+}
+.oo_line{
+    float: left;
+    border-right: 1px solid #9dd7ff;
+    height: 215px;
+    margin-top: 20px;
+}

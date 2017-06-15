@@ -1,0 +1,143 @@
+2017/06/15 23:20:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:8086/face/index
+---
+2017/06/15 23:38:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "layouts/face".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('layouts/face')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/layouts/face
+---
+2017/06/15 23:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "layouts/face".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('layouts/face')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/layouts/face
+---
+2017/06/15 23:38:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "face".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('face')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('face')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('car/face')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/car/face
+---
+2017/06/15 23:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:45:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:47:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:47:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:48:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:48:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/index".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login/index
+---
+2017/06/15 23:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/login_bg.png".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('images/login_bg...')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/login_bg.png
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/15 23:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/login_left_bg.png".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('images/login_le...')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/login_left_bg.png
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/15 23:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/login_left_bg.png".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('images/login_le...')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/login_left_bg.png
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/15 23:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/login_bg.png".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('images/login_bg...')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/login_bg.png
+HTTP_REFERER=http://localhost:8086/login/index
+---

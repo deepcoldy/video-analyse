@@ -1,0 +1,11 @@
+{
+    "config": {
+        "secure-http": false
+    },
+    "require": {
+        "qiniu/php-sdk": "^7.0",
+        "intervention/image": "^2.3"
+
+    }
+
+}
