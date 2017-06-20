@@ -447,3 +447,87 @@ Stack trace:
 REQUEST_URI=/login/login
 HTTP_REFERER=http://localhost:8089/login/index
 ---
+2017/06/20 23:39:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+---
+2017/06/20 23:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+---
+2017/06/20 23:46:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/20 23:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/20 23:46:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/20 23:47:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+HTTP_REFERER=http://localhost:8086/login/index
+---
+2017/06/20 23:55:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+---
+2017/06/20 23:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('register')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('register')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/register
+---
