@@ -300,7 +300,7 @@
 @media screen and (min-width: 1440px) {
     #noclear {
         top: 253px;
-    } 
+    }
     .getVerify {
         top: 239px;
         right: 58px;
@@ -314,7 +314,7 @@
 @media screen and (min-width: 1680px) {
     #noclear {
         top: 284px;
-    } 
+    }
     .getVerify {
         top: 272px;
         right: 65px;
@@ -331,7 +331,7 @@
 @media screen and (min-width: 1920px) {
     #noclear {
         top: 338px;
-    } 
+    }
     .getVerify {
         top: 323px;
         right: 86px;
@@ -345,7 +345,11 @@
         font-size: 16px;
     }
 }
+.ui-web-btn {
+    line-height: 3.22222rem!important;
+}
 </style>
+<link rel="stylesheet" type="text/css" href="http://dressplus.appdevs.cn/css/reset.css">
 <div class="ui-login-con">
     <div class="ui-login-left">
         <div class="ui-login-left-bg"></div>
@@ -355,20 +359,20 @@
             <div class="ui-web-logo"> </div>
             <div class="ui-web-input">
                 <span class="ui-user-icon ui-com-clearFix"></span>
-                <input data-event="blur>hideError" data-bind="args.account" type="text"/>
+                <input data-event="blur>hideError" name="username" type="text"/>
             </div>
             <div class="ui-web-input ui-com-clearFix">
                 <span class="ui-lock-icon"></span>
-                <input data-event="blur>hideError" data-bind="args.password" type="password"/>
+                <input data-event="blur>hideError" name="password" type="password"/>
             </div>
-            <input type="text" data-event="blur>hideError" data-bind="getVerifyCode" class="getVerifyCode" placeholder="验证码"/>
-            <img class="getVerify"><div id="noclear" data-event="changecode">换一张</div>
+            <input type="text" name="yzm" class="getVerifyCode" placeholder="验证码"/>
+            <img class="getVerify" id="verfiy-img"><div id="noclear">换一张</div>
             <div class="ui-error-con" id="login_error_msg">
                 <span class="ui-error-icon"></span>
                 <span class="ui-error-text">请输入正确的用户名或密码或验证码</span>
             </div>
             <div data-event="resetpassword" class="clickgo">忘记密码</div>
-            <div data-event="login" class="ui-web-btn">登录</div>
+            <div id="login" class="ui-web-btn">登录</div>
             <div data-event="register" class="clickgo" style="text-align:center;">立即注册</div>
         </div>
 
@@ -380,5 +384,6 @@
             <p class="ui-order-l-des">Copyright @ 2017 Beijing Moshanghua Tech Co., Ltd. All rights reserved</p>
         </div>
     </div>
-
 </div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="/js/login.js"></script>
