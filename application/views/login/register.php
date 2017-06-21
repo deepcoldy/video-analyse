@@ -99,7 +99,7 @@ embed{
 .ui-web-logo{
     width: 100%;
     height: 8.57143rem;
-    background: url("../images/dress_logo.png") no-repeat center;
+    background: url("/images/dress_logo.png") no-repeat center;
     margin-bottom: 1.11111rem;
     background-size: 40%;
 }
@@ -151,7 +151,7 @@ embed{
     font-size: 0;
 }
 .ui-web-input .ui-user-icon{
-    background: url("../images/user_icon.png") no-repeat center;
+    background: url("/images/user_icon.png") no-repeat center;
     border-right: 1px solid #666;
     display: inline-block;
     width: 1.42857rem;
@@ -162,7 +162,7 @@ embed{
 }
 
 .ui-web-input .ui-lock-icon{
-    background: url("../images/lock_icon.png") no-repeat center;
+    background: url("/images/lock_icon.png") no-repeat center;
     border-right: 1px solid #666;
     display: inline-block;
     width: 1.42857rem;
@@ -173,7 +173,7 @@ embed{
 }
 
 .ui-web-input .ui-search-icon{
-    background: url("../images/search_icon.png") no-repeat center 0.12857rem;
+    background: url("/images/search_icon.png") no-repeat center 0.12857rem;
     display: inline-block;
     width: 1.28571rem;
     height: 100%;
@@ -205,7 +205,7 @@ embed{
     height: 1.42857rem;
 }
 .ui-error-con .ui-error-icon{
-    background: url("../images/error_icon.png") no-repeat center;
+    background: url("/images/error_icon.png") no-repeat center;
     width: 1.42857rem;
     height: 1.42857rem;
     vertical-align: middle;
@@ -249,27 +249,27 @@ embed{
     background-size: 100%!important;
 }
 .ui-video-on-icon{
-    background: url("../images/voide_on_icon.png") no-repeat center;
+    background: url("/images/voide_on_icon.png") no-repeat center;
     width: 2.92857rem;
     height: 2.92857rem;
 }
 .ui-video-off-icon{
-    background: url("../images/voide_off_icon.png") no-repeat center;
+    background: url("/images/voide_off_icon.png") no-repeat center;
     width: 2.92857rem;
     height: 2.92857rem;
 }
 .ui-count-off-icon{
-    background: url("../images/count_off_icon.png") no-repeat center;
+    background: url("/images/count_off_icon.png") no-repeat center;
     height: 2.78571rem;
     width: 3.07143rem;
 }
 .ui-count-on-icon{
-    background: url("../images/count_on_icon.png") no-repeat center;
+    background: url("/images/count_on_icon.png") no-repeat center;
     height: 2.78571rem;
     width: 3.07143rem;
 }
 .ui-web-back-icon{
-    background: url("../images/back_icon.png") no-repeat top;
+    background: url("/images/back_icon.png") no-repeat top;
     width: 1rem;
     height: 1.71429rem;
     vertical-align: middle;
@@ -282,28 +282,28 @@ embed{
     padding-top: 10.71429rem;
 }
 .ui-web-label-icon{
-    background: url("../images/label_icon.png") no-repeat center;
+    background: url("/images/label_icon.png") no-repeat center;
     width: 4.35714rem;
     height: 38px;
     vertical-align: middle;
     background-size: 100%;
 }
 .ui-web-people-icon{
-    background: url("../images/people_icon.png") no-repeat center;
+    background: url("/images/people_icon.png") no-repeat center;
     width: 5.21429rem;
     height: 4.14286rem;
     vertical-align: middle;
     background-size: 100%;
 }
 .ui-web-place-icon{
-    background: url("../images/place_icon.png") no-repeat center;
+    background: url("/images/place_icon.png") no-repeat center;
     width: 5.35714rem;
     height: 4.14286rem;
     vertical-align: middle;
     background-size: 100%;
 }
 .ui-web-tings-icon {
-    background: url("../images/things_icon.png") no-repeat center;
+    background: url("/images/things_icon.png") no-repeat center;
     height: 4.21429rem;
     width: 4.07143rem;
     vertical-align: middle;
@@ -443,7 +443,7 @@ input[type="range"] {
     height: 12.85714rem;
 }
 .ui-detail-export-icon{
-    background: url("../images/export_icon.png") no-repeat center;
+    background: url("/images/export_icon.png") no-repeat center;
     width: 1.28571rem;
     height: 0.71429rem;
     vertical-align: middle;
@@ -453,7 +453,7 @@ input[type="range"] {
 
 }
 .ui-detail-unexport-icon{
-    background: url("../images/unexport_icon.png") no-repeat center;
+    background: url("/images/unexport_icon.png") no-repeat center;
     width: 1.28571rem;
     height: 0.64286rem;
     vertical-align: middle;
@@ -499,7 +499,7 @@ input[type="range"] {
 .register-background{
     width: 100%;
     height: 100%;
-    background: url(../images/login_bg.png) no-repeat center;
+    background: url(/images/login_bg.png) no-repeat center;
     background-size: 61.11111rem;
 }
 .ui-register-con {
@@ -537,10 +537,10 @@ input[type="range"] {
     -moz-border-radius: 0.35714rem 0.35714rem 0.35714rem;
     -o-border-radius: 0.35714rem 0.35714rem 0.35714rem;
     -mso-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-} 
+}
 .ui-register-con .ui-web-btn {
     width: 80%;
-    margin: 16px auto;
+    margin: 40px auto;
 }
 .ui-register-con .label {
     font-size: 24px;
@@ -558,7 +558,7 @@ input[type="range"] {
 }
 #registernoclear {
     position: absolute;
-    right: 0;
+    right: -32px;
     top: 403px;
     color: #808080;
 }
@@ -624,7 +624,7 @@ input[type="range"] {
     margin-bottom: 26px;
 }
 .registerSuccess .success_icon {
-    background: url(../images/success_icon.png) no-repeat top center;
+    background: url(/images/success_icon.png) no-repeat top center;
     background-size: 50px;
     height: 74px;
 }
@@ -655,30 +655,47 @@ input[type="range"] {
     width: 100%;
     text-align: center;
 }
+.sk-mask {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    z-index: 999999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.sk-mask>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
 </style>
 <div class="register-background">
-<?php if(!$registerSuccess) { ?>
-<div class="ui-register-con ui-default-con" style="display: none">    
+<div class="ui-register-con ui-default-con" >
     <!--<div class="ui-login-form">-->
     <div class="ui-login-form" style="margin-top:50px !important;">
         <div class="ui-web-logo"> </div>
         <div class="ui-register-input">
             <div class="label">邮箱<span class="explain">邮箱作为注册账号的账户名称</span></div>
-            <input data-event="blur>hideError" data-bind="args.email" type="text"/>
+            <input name="email" type="text"/>
             <div class="label">电话号码</div>
-            <input data-event="blur>hideError" data-bind="args.tel" type="number"/>
+            <input name="phone" type="number"/>
             <div class="label">公司名称<span class="explain">英文数字或汉字[3-20字符，不分大小写]</span></div>
-            <input data-event="blur>hideError" data-bind="args.companyName" type="text"/>
+            <input name="company" type="text"/>
             <div class="label">密码<span class="explain">英文、数字下划线[6-20位区分大小写]</span></div>
-            <input data-event="blur>hideError" data-bind="args.password" type="password"/>
+            <input name="password" type="password"/>
             <div class="label">验证码</div>
-            <input type="text" data-event="blur>hideError" data-bind="registerVerifyCode" id="registerVerifyCode" placeholder="验证码"/>
-            <img class="registerVerify"><div id="registernoclear">看不清？<span data-event="changecode">换一张</span></div>
+            <input type="text" name="verifyCode" id="registerVerifyCode" placeholder="验证码"/>
+            <img id="verfiy-img" class="registerVerify"><div id="registernoclear">看不清？<span id="changecode">换一张</span></div>
         </div>
         <div class="ui-error-text"></div>
-        <div data-event="register" class="ui-web-btn">同意协议并注册</div>
+        <div id="register" class="ui-web-btn">同意协议并注册</div>
     </div>
-    <div style="text-align:center;color: #808080;">已经有账号了？<span data-event="login" class="at_once">立即登录</span></div>
+    <div style="text-align:center;color: #808080;">已经有账号了？<span id="login" class="at_once">立即登录</span></div>
     <div class="ui-procol-des">
         <p class="ui-order-h-des">
             <span>用户协议</span>
@@ -687,22 +704,20 @@ input[type="range"] {
         <p class="ui-order-l-des">Copyright @ 2017 Ltd.All rights reserved</p>
     </div>
 </div>
-<?php } else if($registerSuccess) { ?>
 
 <!-- 激活的页面 -->
-<div class="ui-register-con ui-registerResult-con" style="display: none">    
+<div class="ui-register-con ui-registerResult-con" style="display: none">
     <h4>激活</h4>
     <div>确认邮件已发送</div>
     <div class="email"></div>
     <div>请登录您的邮箱激活账号，完成注册</div>
     <h5>没有收到邮件？</h5>
     <div class="problem">
-        <div>1.请检查邮箱地址是否正确<span data-event="rewrite">重新填写</span></div>
+        <div>1.请检查邮箱地址是否正确<span id="rewrite">重新填写</span></div>
         <div>2.检查您的邮箱里的“垃圾邮件”分类</div>
-        <div>3.若仍未收到确认邮件，请尝试<span data-event="resend">重新发送</span></div>
+        <div>3.若仍未收到确认邮件，请尝试<span id="resend">重新发送</span></div>
     </div>
 </div>
-<?php } ?>
 
 <!-- 注册成功的提示 -->
 <div class="ui-register-con registerSuccess" style="display: none">
@@ -711,6 +726,17 @@ input[type="range"] {
     <div class="content" style="display:none;">
         <div><span id="endtime">5</span>秒后跳转到登录页</div>
         <button data-event="login">立即登录</button>
-    </div>    
+    </div>
 </div>
+<div style="position: absolute; left: 0px; top: 0px; z-index: 99999;display: none;" id="loading">﻿
+    <div class="sk-mask" data-level="">
+        <div class="sk-mask-bg" style="opacity: 0;background-color: #fff; "></div>
+        <div class="sk-mask-text" style="background-image: url(http://dressplus.appdevs.cn/node_modules/seekjs/ui/mask/loading.gif);background-repeat: no-repeat;background-position: center center;"></div>
+    </div>
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript">
+    var page = '<?php echo $page; ?>';
+</script>
+<script src="/js/register.js"></script>
 </div>

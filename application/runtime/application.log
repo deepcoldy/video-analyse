@@ -531,3 +531,279 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/login/register
 ---
+2017/06/21 20:36:16 [error] [exception.ParseError] ParseError: syntax error, unexpected '}', expecting end of file in /usr/local/var/www/video-analyse/application/views/login/register.php:703
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CBaseController.php(95): CBaseController->renderInternal('/usr/local/var/...', NULL, true)
+#1 /usr/local/var/www/video-analyse/framework/web/CController.php(869): CBaseController->renderFile('/usr/local/var/...', NULL, true)
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(782): CController->renderPartial('/login/register', NULL, true)
+#3 /usr/local/var/www/video-analyse/application/controllers/LoginController.php(24): CController->render('/login/register')
+#4 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): LoginController->actionRegister()
+#5 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('register')
+#9 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register')
+#10 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/login/register
+---
+2017/06/21 20:50:46 [error] [exception.GuzzleHttp\Exception\ConnectException] GuzzleHttp\Exception\ConnectException: cURL error 7: Failed to connect to dressplus-api.appdevs.cn port 80: Operation timed out (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) in /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php:186
+Stack trace:
+#0 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(150): GuzzleHttp\Handler\CurlFactory::createRejection(Object(GuzzleHttp\Handler\EasyHandle), Array)
+#1 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(103): GuzzleHttp\Handler\CurlFactory::finishError(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#2 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php(43): GuzzleHttp\Handler\CurlFactory::finish(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#3 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php(28): GuzzleHttp\Handler\CurlHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php(51): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php(42): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Middleware.php(30): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php(68): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#8 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#9 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/HandlerStack.php(67): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#10 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(275): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#11 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(123): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#12 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(129): GuzzleHttp\Client->requestAsync('POST', Object(GuzzleHttp\Psr7\Uri), Array)
+#13 /usr/local/var/www/video-analyse/application/controllers/LoginController.php(35): GuzzleHttp\Client->request('POST', '/verify/code')
+#14 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): LoginController->actionVerifyCode()
+#15 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('VerifyCode')
+#19 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/VerifyCod...')
+#20 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#22 {main}
+REQUEST_URI=/login/VerifyCode
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 20:54:27 [error] [exception.GuzzleHttp\Exception\ConnectException] GuzzleHttp\Exception\ConnectException: cURL error 7: Failed to connect to dressplus-api.appdevs.cn port 80: Operation timed out (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) in /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php:186
+Stack trace:
+#0 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(150): GuzzleHttp\Handler\CurlFactory::createRejection(Object(GuzzleHttp\Handler\EasyHandle), Array)
+#1 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(103): GuzzleHttp\Handler\CurlFactory::finishError(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#2 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php(43): GuzzleHttp\Handler\CurlFactory::finish(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#3 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php(28): GuzzleHttp\Handler\CurlHandler->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#4 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php(51): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#5 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php(42): GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#6 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Middleware.php(30): GuzzleHttp\PrepareBodyMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#7 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php(68): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#8 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Middleware.php(59): GuzzleHttp\RedirectMiddleware->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#9 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/HandlerStack.php(67): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Request), Array)
+#10 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(275): GuzzleHttp\HandlerStack->__invoke(Object(GuzzleHttp\Psr7\Request), Array)
+#11 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(123): GuzzleHttp\Client->transfer(Object(GuzzleHttp\Psr7\Request), Array)
+#12 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(129): GuzzleHttp\Client->requestAsync('POST', Object(GuzzleHttp\Psr7\Uri), Array)
+#13 /usr/local/var/www/video-analyse/application/controllers/LoginController.php(35): GuzzleHttp\Client->request('POST', '/verify/code')
+#14 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): LoginController->actionVerifyCode()
+#15 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('VerifyCode')
+#19 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/VerifyCod...')
+#20 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#22 {main}
+REQUEST_URI=/login/VerifyCode
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 20:59:00 [error] [exception.GuzzleHttp\Exception\ServerException] GuzzleHttp\Exception\ServerException: Server error: `POST http://dressplus-api.appdevs.cn/verify/code` resulted in a `502 Bad Gateway` response:
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+ (truncated...)
+ in /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:111
+Stack trace:
+#0 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Middleware.php(65): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 /usr/local/var/www/video-analyse/vendor/guzzlehttp/promises/src/Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 /usr/local/var/www/video-analyse/vendor/guzzlehttp/guzzle/src/Client.php(129): GuzzleHttp\Promise\Promise->wait()
+#10 /usr/local/var/www/video-analyse/application/controllers/LoginController.php(35): GuzzleHttp\Client->request('POST', '/verify/code')
+#11 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): LoginController->actionVerifyCode()
+#12 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('VerifyCode')
+#16 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/VerifyCod...')
+#17 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#19 {main}
+REQUEST_URI=/login/VerifyCode
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 21:17:30 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function RegisterController::doVerifyCheck(), 0 passed in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php on line 76 and exactly 2 expected in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php:18
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/controllers/RegisterController.php(76): RegisterController->doVerifyCheck()
+#1 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): RegisterController->actionRegister()
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('register')
+#6 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('register/regist...')
+#7 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/register/register
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 21:20:19 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function RegisterController::doVerifyCheck(), 0 passed in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php on line 76 and exactly 2 expected in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php:18
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/controllers/RegisterController.php(76): RegisterController->doVerifyCheck()
+#1 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): RegisterController->actionRegister()
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('register')
+#6 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('register/regist...')
+#7 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/register/register
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 21:21:10 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function RegisterController::doVerifyCheck(), 0 passed in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php on line 76 and exactly 2 expected in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php:18
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/controllers/RegisterController.php(76): RegisterController->doVerifyCheck()
+#1 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): RegisterController->actionRegister()
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('register')
+#6 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('register/regist...')
+#7 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/register/register
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 21:26:56 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function RegisterController::doVerifyCheck(), 0 passed in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php on line 76 and exactly 2 expected in /usr/local/var/www/video-analyse/application/controllers/RegisterController.php:18
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/controllers/RegisterController.php(76): RegisterController->doVerifyCheck()
+#1 /usr/local/var/www/video-analyse/framework/web/actions/CInlineAction.php(49): RegisterController->actionRegister()
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('register')
+#6 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('register/regist...')
+#7 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/register/register
+HTTP_REFERER=http://localhost:8089/login/register
+---
+2017/06/21 23:02:28 [error] [exception.ParseError] ParseError: syntax error, unexpected 'die' (T_EXIT) in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:38
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('register/activa...')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register/...')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/register/activation/RJ4BIQ5VF2/user_id/10056
+---
+2017/06/21 23:02:35 [error] [exception.ParseError] ParseError: syntax error, unexpected 'die' (T_EXIT) in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:38
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('register/activa...')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register/...')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/register/activation/RJ4BIQ5VF2/user_id/10056
+---
+2017/06/21 23:09:01 [error] [exception.ParseError] ParseError: syntax error, unexpected ')' in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:38
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('register/activa...')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/register/...')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/register/activation/RJ4BIQ5VF2/user_id/10056
+---
+2017/06/22 00:04:37 [error] [exception.ParseError] ParseError: syntax error, unexpected '$this' (T_VARIABLE) in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:106
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('index/')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/index')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/index
+---
+2017/06/22 00:13:55 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ']' in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:126
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('resetpassword/a...')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/resetpass...')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/resetpassword/activation/TYFNE46VF2/user_id/10066
+---
+2017/06/22 00:14:38 [error] [exception.ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN) in /usr/local/var/www/video-analyse/application/controllers/LoginController.php:128
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('resetpassword/a...')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/resetpass...')
+#2 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#4 {main}
+REQUEST_URI=/login/resetpassword/activation/TYFNE46VF2/user_id/10066
+---
+2017/06/22 00:14:46 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /usr/local/var/www/video-analyse/framework/web/CController.php:336
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('resetpassword')
+#4 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/resetpass...')
+#5 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#7 {main}
+REQUEST_URI=/login/resetpassword/activation/TYFNE46VF2/images/login_bg.png
+HTTP_REFERER=http://localhost:8089/login/resetpassword/activation/TYFNE46VF2/user_id/10066
+---
+2017/06/22 00:15:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "login_bg.png". in /usr/local/var/www/video-analyse/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login_bg.png')
+#1 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/login_bg.png
+HTTP_REFERER=http://localhost:8089/login/resetpassword/activation/TYFNE46VF2/user_id/10066
+---
+2017/06/22 00:36:44 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /usr/local/var/www/video-analyse/framework/web/CController.php:336
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /usr/local/var/www/video-analyse/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /usr/local/var/www/video-analyse/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('resetpassword')
+#4 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('login/resetpass...')
+#5 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#7 {main}
+REQUEST_URI=/login/resetpassword
+---
+2017/06/22 01:07:43 [error] [exception.CException] CException: CWebApplication and its behaviors do not have a method or closure named "session". in /usr/local/var/www/video-analyse/framework/base/CComponent.php:266
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/components/Controller.php(16): CComponent->__call('session', Array)
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(359): Controller->__construct('object', NULL)
+#2 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('tags/')
+#3 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('object/tags')
+#4 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#6 {main}
+REQUEST_URI=/object/tags
+HTTP_REFERER=http://localhost:8089/object/detect
+---
+2017/06/22 01:09:41 [error] [exception.CException] CException: Property "CHttpSession.user_login" is not defined. in /usr/local/var/www/video-analyse/framework/base/CComponent.php:130
+Stack trace:
+#0 /usr/local/var/www/video-analyse/application/components/Controller.php(16): CComponent->__get('user_login')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(359): Controller->__construct('object', NULL)
+#2 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(276): CWebApplication->createController('tags/')
+#3 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('object/tags')
+#4 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#6 {main}
+REQUEST_URI=/object/tags
+HTTP_REFERER=http://localhost:8089/object/detect
+---

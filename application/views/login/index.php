@@ -348,6 +348,24 @@
 .ui-web-btn {
     line-height: 3.22222rem!important;
 }
+.sk-mask {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    z-index: 999999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.sk-mask>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="http://dressplus.appdevs.cn/css/reset.css">
 <div class="ui-login-con">
@@ -359,11 +377,11 @@
             <div class="ui-web-logo"> </div>
             <div class="ui-web-input">
                 <span class="ui-user-icon ui-com-clearFix"></span>
-                <input data-event="blur>hideError" name="username" type="text"/>
+                <input data-event="blur>hideError" name="username" placeholder="请输入您的邮箱" type="text"/>
             </div>
             <div class="ui-web-input ui-com-clearFix">
                 <span class="ui-lock-icon"></span>
-                <input data-event="blur>hideError" name="password" type="password"/>
+                <input data-event="blur>hideError" name="password"  placeholder="请输入您的密码" type="password"/>
             </div>
             <input type="text" name="yzm" class="getVerifyCode" placeholder="验证码"/>
             <img class="getVerify" id="verfiy-img"><div id="noclear">换一张</div>
@@ -371,7 +389,7 @@
                 <span class="ui-error-icon"></span>
                 <span class="ui-error-text">请输入正确的用户名或密码或验证码</span>
             </div>
-            <div data-event="resetpassword" class="clickgo">忘记密码</div>
+            <div id="resetpassword" class="clickgo">忘记密码</div>
             <div id="login" class="ui-web-btn">登录</div>
             <a href="/login/register">
                 <div data-event="register" class="clickgo" style="text-align:center;">立即注册</div>
@@ -385,6 +403,12 @@
             </p>
             <p class="ui-order-l-des">Copyright @ 2017 Beijing Moshanghua Tech Co., Ltd. All rights reserved</p>
         </div>
+    </div>
+</div>
+<div style="position: absolute; left: 0px; top: 0px; z-index: 99999;display: none;" id="loading">﻿
+    <div class="sk-mask" data-level="">
+        <div class="sk-mask-bg" style="opacity: 0;background-color: #fff; "></div>
+        <div class="sk-mask-text" style="background-image: url(http://dressplus.appdevs.cn/node_modules/seekjs/ui/mask/loading.gif);background-repeat: no-repeat;background-position: center center;"></div>
     </div>
 </div>
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>

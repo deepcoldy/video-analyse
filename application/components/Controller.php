@@ -13,6 +13,9 @@ class Controller extends CController
         parent::__construct($id, $module);
 
         global $CONFIG;
+    	if (!Yii::app()->session->get('user_login')) {
+    		$this->redirect('/login/index');
+    	}
 //        RedisMultiStorage::config($CONFIG['RedisStorage']);     // 初始化redis
     }
 

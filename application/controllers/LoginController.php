@@ -7,7 +7,7 @@
  */
 // require '../../vendor/autoload.php';
 
-class LoginController extends Controller {
+class LoginController extends NoPowerController {
 
     // public $layout = 'login';
     private $client = null;
@@ -18,10 +18,30 @@ class LoginController extends Controller {
         $this->render('/login/index');
     }
 
-    public function actionRegister()
+    private function doActivation($data, $type = 100) {
+        $this->initHttpClient();
+        $response = $this->client->request('post', '/user/activation', [
+            'form_params' => [
+                'userId' => $data['userId'],
+                'code' => $data['code'],
+                'registerFrom' => 100,
+                'type' => $type
+            ]
+        ]);
+        return json_decode($response->getBody(), true);
+    }
+
+    public function actionRegister($activation = '', $user_id = '')
     {
-        $this->pageTitle = '登录';
-        $this->render('/login/register');
+        $page = 'form';
+        if ($activation && $user_id) {
+            $activationData = $this->doActivation(['userId' => $user_id, 'code' => $activation]);
+            if ($activationData['status'] == 'SUCCESS') {
+                $page = 'success';
+            }
+        }
+        $this->pageTitle = '注册';
+        $this->render('/login/register', ['page' => $page]);
     }
 
     private function initHttpClient() {
@@ -73,12 +93,40 @@ class LoginController extends Controller {
                 } else {
                     $res['status'] = 'ok';
                     $res['msg'] = '登录成功';
+                    Yii::app()->session['user_login'] = $username;
                 }
             }
         } else {
             $res['msg'] = '请输入正确的用户名或密码或验证码';
         }
         die(json_encode($res));
+    }
+
+    public function actionResetpassword($activation = '', $user_id = '') {
+        $this->pageTitle = '忘记密码';
+        $page = 'first';
+        $email = '';
+        if ($activation && $user_id) {
+            $activationData = $this->doActivation(['userId' => $user_id, 'code' => $activation], 200);
+            if ($activationData['status'] == 'SUCCESS') {
+                $userData = $this->getUserInfo($user_id);
+                if ($userData['status'] == 'SUCCESS') {
+                    $page = 'thrid';
+                    $email = $userData['data']['email'];
+                }
+            }
+        }
+        $this->render('/login/reset', ['page' => $page, 'email' => $email, 'user_id' => $user_id]);
+    }
+
+    private function getUserInfo($userId) {
+        $this->initHttpClient();
+        $response = $this->client->request('post', '/user/info', [
+            'form_params' => [
+                'userId' => $userId
+            ]
+        ]);
+        return json_decode($response->getBody(), true);
     }
 
     private function doResetPass($data) {
@@ -90,7 +138,7 @@ class LoginController extends Controller {
         return json_decode($body, true);
     }
 
-    public function sendResetPassAction() {
+    public function actionResendpass() {
         $request = Yii::app()->request;
         $username = $request->getParam('username');
         $data = $this->doResetPass(['userName' => $username, 'step' => 100]);
@@ -101,7 +149,7 @@ class LoginController extends Controller {
         }
     }
 
-    public function resetPassAction() {
+    public function actionResetpass() {
         $request = Yii::app()->request;
         $userName = $request->getParam('username');
         $userId = $request->getParam('userId');
