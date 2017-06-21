@@ -9,13 +9,19 @@
 
 class LoginController extends Controller {
 
-    // public $layout = 'new';
+    // public $layout = 'login';
     private $client = null;
 
     public function actionIndex()
     {
         $this->pageTitle = '登录';
         $this->render('/login/index');
+    }
+
+    public function actionRegister()
+    {
+        $this->pageTitle = '登录';
+        $this->render('/login/register');
     }
 
     private function initHttpClient() {

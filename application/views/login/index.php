@@ -373,7 +373,9 @@
             </div>
             <div data-event="resetpassword" class="clickgo">忘记密码</div>
             <div id="login" class="ui-web-btn">登录</div>
-            <div data-event="register" class="clickgo" style="text-align:center;">立即注册</div>
+            <a href="/login/register">
+                <div data-event="register" class="clickgo" style="text-align:center;">立即注册</div>
+            </a>
         </div>
 
         <div class="ui-procol-des">
