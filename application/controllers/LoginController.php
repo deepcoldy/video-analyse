@@ -75,6 +75,39 @@ class LoginController extends Controller {
         die(json_encode($res));
     }
 
+    private function doResetPass($data) {
+        $this->initHttpClient();
+        $response = $this->client->request('post', '/user/resetPass', [
+            'form_params' => $data
+        ]);
+        $body = $response->getBody();
+        return json_decode($body, true);
+    }
+
+    public function sendResetPassAction() {
+        $request = Yii::app()->request;
+        $username = $request->getParam('username');
+        $data = $this->doResetPass(['userName' => $username, 'step' => 100]);
+        if ($data['status'] == 'SUCCESS') {
+            die(json_encode(['status' => 'ok']));
+        } else {
+            die(json_encode(['status' => 'failed']));
+        }
+    }
+
+    public function resetPassAction() {
+        $request = Yii::app()->request;
+        $userName = $request->getParam('username');
+        $userId = $request->getParam('userId');
+        $password = $request->getParam('password');
+        $data = $this->doResetPass(['userName' => $userName, 'userId' => $userId, 'password' => $password, 'step' => 200]);
+        if ($data['status'] == 'SUCCESS') {
+            die(json_encode(['status' => 'ok']));
+        } else {
+            die(json_encode(['status' => 'failed']));
+        }
+    }
+
     // public function actionPostDetects()
     // {
     //     $uploadedUrl = $this->doUploadImage();
