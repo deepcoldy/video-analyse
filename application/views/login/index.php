@@ -12,10 +12,15 @@ input{
     border:0px;
     font-size: 0.1rem;
     border-radius: 2px;
+    min-height: 40px;
 }
 input,img{vertical-align:middle;}
+.ui-error-con{
+    width: 2.35rem;
+    margin: 0 auto;
+}
 .ui-error-text {
-    width: 3rem;
+    width: 2.35rem;
     margin: 0 auto;
     font-size: 0.1rem;
     color: red;
@@ -139,7 +144,10 @@ input,img{vertical-align:middle;}
         </div>
         <div style="height:0.1rem;"></div>
         <a href="#" id="resetpassword" class="forgot">忘记密码?</a>
-        <div class="ui-error-text"></div>
+        <div class="ui-error-con" id="login_error_msg" style="display:none;">
+            <span class="ui-error-icon"></span>
+            <span class="ui-error-text">请输入正确的用户名或密码或验证码</span>
+        </div>
         <div style="height:0.1rem;"></div>
         <div id="login" class="submit">登录</div>
         <div style="height:0.1rem;"></div>

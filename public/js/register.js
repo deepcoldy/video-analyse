@@ -95,6 +95,7 @@ $(function () {
         },
         doRegister: function () {
             $('#loading').css('display', 'block');
+            var self = this;
             $.ajax({
                 url: '/register/register',
                 type: 'POST',
@@ -106,6 +107,7 @@ $(function () {
                     register.getVerifyCode()
                     register.notice(res.msg)
                 } else {
+                    $('.ui-registerResult-con .email').text(self.formData.email);
                     register.notice('')
                     register.userId = res.data.userId
                     register.switchPage('invation')

@@ -7,25 +7,17 @@ $(function () {
         },
         switchPage: function (page) {
             if (page == 'first') {
-                $('.firststep').show();
-                $('.thridstep').hide();
-                $('.secondstep').hide();
-                $('.step-con').removeClass('isactive')
-                $('.step-con').eq(0).addClass('isactive')
+                $('.firstpage').show();
+                $('.secondpage').hide();
+                $('.thirdpage').hide();
             } else if (page == 'second') {
-                $('.secondstep').show();
-                $('.firststep').hide();
-                $('#confirmclick').hide();
-                $('.thridstep').hide();
-                $('.step-con').removeClass('isactive')
-                $('.step-con').eq(1).addClass('isactive')
+                $('.firstpage').hide();
+                $('.secondpage').show();
+                $('.thirdpage').hide();
             } else if (page == 'thrid') {
-                $('.thridstep').show();
-                $('.firststep').hide();
-                $('.secondstep').hide()
-                $('.step-con').removeClass('isactive')
-                $('.step-con').eq(2).addClass('isactive')
-                $('#confirmclick').addClass('active-btn').attr('disabled', false);
+                $('.firstpage').hide();
+                $('.secondpage').hide();
+                $('.thirdpage').show();
             }
         },
         getFormData: function () {
@@ -62,6 +54,15 @@ $(function () {
         doConfirm: function () {
             this.getFormData()
             if (page == 'first') {
+                var emailReg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+                if (reset.formData.email == '') {
+                    this.notice('邮箱不能为空');
+                    return false;
+                }
+                if (!emailReg.test(reset.formData.email)) {
+                    this.notice('邮箱格式不正确');
+                    return false;
+                }
                 $('#loading').css('display', 'block');
                 $.ajax({
                     url: '/login/resendpass',
@@ -130,7 +131,7 @@ $(function () {
             $('input[name=email]').on('keyup', t);
             $('input[name=email]').on('input', t);
 
-            $('#confirmclick').on('click', function () {
+            $('#confirmclick, #submit').on('click', function () {
                 reset.doConfirm();
             })
         },

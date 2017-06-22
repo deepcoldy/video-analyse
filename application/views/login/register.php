@@ -92,6 +92,7 @@ input,img{vertical-align:middle;}
     width: 40%;
     display: block;
     margin: 20px auto;
+    margin-top: 40px;
 }
 
 .ui-error-text {
@@ -157,17 +158,17 @@ input,img{vertical-align:middle;}
         <div style="height:0.1rem;"></div>
         <div class="line">
             <div class="name">电话号码</div>
-            <input name="phone" class="input" type="text" placeholder="请输入手机号码">
+            <input name="phone" maxlength="11" class="input" type="text" placeholder="请输入手机号码">
         </div>
         <div style="height:0.1rem;"></div>
         <div class="line">
             <div class="name">公司名称</div>
-            <input name="company" class="input" type="text" placeholder="英文或数字（3～20个字符，不区分大小写）">
+            <input name="company" class="input" type="text" maxlength="20" placeholder="英文或数字（3～20个字符，不区分大小写）">
         </div>
         <div style="height:0.1rem;"></div>
         <div class="line">
             <div class="name">密码</div>
-            <input name="password" type="password" class="input" placeholder="英文、数字或符号（6～20位，区分大小写）">
+            <input name="password" type="password" class="input" maxlength="20" placeholder="英文、数字或符号（6～20位，区分大小写）">
         </div>
         <div style="height:0.1rem;"></div>
         <div class="line">
@@ -198,9 +199,16 @@ input,img{vertical-align:middle;}
             <div>② 检查您的邮箱里的“垃圾邮件”分类</div>
             <div>③ 若仍未收到确认邮件，请尝试<span id="resend">重新发送</span></div>
         </div>
+        <img class="copyright" style="margin-top:80px;"
+        src="https://martin-upload.b0.upaiyun.com/web/2017/06/4cfe13e676570c5e4e9e82c1ed548997.jpg" alt="">
     </div>
     <!--注册成功-->
     <div class="registerSuccess">
+        <div class="action">激活中</div>
+        <div class="content" style="display:none;">
+            <div><span id="endtime">5</span>秒后跳转到登录页</div>
+            <button data-event="login">立即登录</button>
+        </div>
     </div>
 </div>
 <!--<div class="register-background">
@@ -248,20 +256,20 @@ input,img{vertical-align:middle;}
 </div>-->
 
 <!-- 注册成功的提示 -->
-<!--<div class="ui-register-con registerSuccess" style="display: none">
+<!--<div class="ui-register-con registerSuccess">
     <div id="activationsuccess"></div>
     <div class="action">激活中</div>
     <div class="content" style="display:none;">
         <div><span id="endtime">5</span>秒后跳转到登录页</div>
         <button data-event="login">立即登录</button>
     </div>
-</div>
+</div>-->
 <div style="position: absolute; left: 0px; top: 0px; z-index: 99999;display: none;" id="loading">﻿
     <div class="sk-mask" data-level="">
         <div class="sk-mask-bg" style="opacity: 0;background-color: #fff; "></div>
         <div class="sk-mask-text" style="background-image: url(http://dressplus.appdevs.cn/node_modules/seekjs/ui/mask/loading.gif);background-repeat: no-repeat;background-position: center center;"></div>
     </div>
-</div>-->
+</div>
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script type="text/javascript">
     var page = '<?php echo $page; ?>';
@@ -291,5 +299,36 @@ input,img{vertical-align:middle;}
     top: 0;
     width: 100%;
     height: 100%;
+}
+
+
+.registerSuccess {
+    margin-top: 17%;
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 22px;
+}
+.registerSuccess .action {
+    font-size: 44px;
+    margin-bottom: 26px;
+}
+.registerSuccess .success_icon {
+    background: url(../images/success_icon.png) no-repeat top center;
+    background-size: 50px;
+    height: 74px;
+}
+.registerSuccess button {
+    line-height:50px;
+    height: 50px;
+    font-size: 22px;
+    -webkit-border-radius: 0.35714rem 0.35714rem 0.35714rem;
+    -moz-border-radius: 0.35714rem 0.35714rem 0.35714rem;
+    -o-border-radius: 0.35714rem 0.35714rem 0.35714rem;
+    -mso-border-radius: 0.35714rem 0.35714rem 0.35714rem;
+    background-color: #007cff;
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 58px;
 }
 </style>
