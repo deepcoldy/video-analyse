@@ -91,6 +91,9 @@ $(function () {
                 $('.ui-registerResult-con').hide()
                 $('.ui-default-con').hide()
                 $('.registerSuccess').show()
+                setTimeout(function () {
+                    location.href = '/login/index'
+                }, 5000);
             }
         },
         doRegister: function () {

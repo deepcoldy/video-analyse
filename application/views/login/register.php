@@ -144,6 +144,22 @@ input,img{vertical-align:middle;}
 }
 .ui-registerResult-con .problem span {color: #1295ef;cursor: pointer;padding-left: 2px;}
 
+.success_logo{
+    width: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.login_now{
+    width: 1.5rem;
+    margin: 0 auto;
+    background: #1295ef;
+    text-align: center;
+    color: white;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.1rem;
+    cursor: pointer;
+}
 </style>
 <div class="outer">
     <!--注册页面-->
@@ -204,10 +220,14 @@ input,img{vertical-align:middle;}
     </div>
     <!--注册成功-->
     <div class="registerSuccess">
+        <img class="success_logo" src="https://martin-upload.b0.upaiyun.com/web/2017/06/926d9e7994fcb738e39bf20758cd5999.png" alt="">
         <div class="action">激活中</div>
-        <div class="content" style="display:none;">
+        <div class="content">
             <div><span id="endtime">5</span>秒后跳转到登录页</div>
-            <button data-event="login">立即登录</button>
+            <div style="height:0.5rem;"></div>
+            <a href="/login/index">
+                <div class="login_now">立即登录</div>
+            </a>
         </div>
     </div>
 </div>
@@ -303,32 +323,13 @@ input,img{vertical-align:middle;}
 
 
 .registerSuccess {
-    margin-top: 17%;
     text-align: center;
     color: #4d4d4d;
     font-size: 22px;
+    margin-top: 1rem;
 }
 .registerSuccess .action {
     font-size: 44px;
     margin-bottom: 26px;
-}
-.registerSuccess .success_icon {
-    background: url(../images/success_icon.png) no-repeat top center;
-    background-size: 50px;
-    height: 74px;
-}
-.registerSuccess button {
-    line-height:50px;
-    height: 50px;
-    font-size: 22px;
-    -webkit-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -moz-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -o-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -mso-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    background-color: #007cff;
-    color: #fff;
-    cursor: pointer;
-    width: 200px;
-    margin-top: 58px;
 }
 </style>
