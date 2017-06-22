@@ -6,14 +6,23 @@ html,body {width: 100%; height: 100%; line-height: 1; margin: 0 auto!important;}
 img{width: 100%}
 a { color: #55cbff; text-decoration: none }
 ul { list-style: none; }
-body{
-    /*background: #1486d5;
-    background-size:3rem 100%;
-    background-repeat:no-repeat;
-    background-clip: 3rem;*/
+input{
+    background:none;
+    outline:none;
+    border:0px;
+    font-size: 0.1rem;
+    border-radius: 2px;
+}
+input,img{vertical-align:middle;}
+.ui-error-text {
+    width: 3rem;
+    margin: 0 auto;
+    font-size: 0.1rem;
+    color: red;
+    margin-top: 20px;
 }
 .outer{
-    min-width: 800px;
+    min-width: 1035px;
     margin: 0 auto;
 }
 .banner{
@@ -37,11 +46,6 @@ body{
     font-size: 0.15rem;
     text-align: center;
     color: #666666;
-}
-input{
-    background:none;  
-   outline:none;  
-   border:0px;  
 }
 .box .line{
     text-align: center;
@@ -79,6 +83,7 @@ input{
     text-align: center;
     display: inline-block;
     cursor: pointer;
+    color: #8C8C8C;
 }
 #noclear a{
     color: #1295ef;
@@ -107,8 +112,6 @@ input{
     display: block;
     margin: 20px auto;
 }
-input{font-size: 0.1rem;}
-input,img{vertical-align:middle;}
 </style>
 <!--<link rel="stylesheet" type="text/css" href="http://dressplus.appdevs.cn/css/reset.css">-->
 <div class="outer">
@@ -136,6 +139,7 @@ input,img{vertical-align:middle;}
         </div>
         <div style="height:0.1rem;"></div>
         <a href="#" id="resetpassword" class="forgot">忘记密码?</a>
+        <div class="ui-error-text"></div>
         <div style="height:0.1rem;"></div>
         <div id="login" class="submit">登录</div>
         <div style="height:0.1rem;"></div>
@@ -159,5 +163,25 @@ input,img{vertical-align:middle;}
 <script src="/js/login.js"></script>
 
 <script type="text/javascript">
-    !function(a,b){function c(){var b=f.getBoundingClientRect().width;if(b<800){b=800;}var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+    !function(a,b){function c(){var b=f.getBoundingClientRect().width;if(b<1035){b=1035;}var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
 </script>
+<style>
+.sk-mask {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    z-index: 999999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.sk-mask>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
