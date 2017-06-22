@@ -816,3 +816,13 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://localhost:8086/login/index
 ---
+2017/06/23 00:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reset".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('reset')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('reset')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/reset')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/reset
+---

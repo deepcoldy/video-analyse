@@ -174,6 +174,10 @@ $(function () {
             this.getVerifyCode();
             this.bindEvents();
             this.switchPage(page);
+            if(error){
+                alert(JSON.parse(error).msg);
+                location.href = '/login/register'
+            }
         }
     }
     register.init();

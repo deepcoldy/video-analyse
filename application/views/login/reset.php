@@ -153,6 +153,7 @@ input,img{vertical-align:middle;}
     var page = '<?php echo $page; ?>';
     var email = '<?php echo $email; ?>';
     var user_id = '<?php echo $user_id; ?>';
+    var error = '<?php echo $error; ?>';
 </script>
 <script src="/js/reset.js"></script>
 

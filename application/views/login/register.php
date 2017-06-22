@@ -293,6 +293,7 @@ input,img{vertical-align:middle;}
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script type="text/javascript">
     var page = '<?php echo $page; ?>';
+    var error = '<?php echo $error; ?>';
 </script>
 <script src="/js/register.js"></script>
 </div>

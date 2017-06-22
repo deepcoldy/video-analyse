@@ -141,6 +141,10 @@ $(function () {
             // user_id = '10066'
             this.switchPage(page)
             this.bindEvents()
+            if(error){
+                alert(JSON.parse(error).msg);
+                location.href = '/login/resetpassword'
+            }
         }
     }
     reset.init();

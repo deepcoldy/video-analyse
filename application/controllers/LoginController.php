@@ -34,14 +34,17 @@ class LoginController extends NoPowerController {
     public function actionRegister($activation = '', $user_id = '')
     {
         $page = 'form';
+        $error = '';
         if ($activation && $user_id) {
             $activationData = $this->doActivation(['userId' => $user_id, 'code' => $activation]);
             if ($activationData['status'] == 'SUCCESS') {
                 $page = 'success';
+            } else {
+                $error = json_encode($activationData);
             }
         }
         $this->pageTitle = '注册';
-        $this->render('/login/register', ['page' => $page]);
+        $this->render('/login/register', ['page' => $page, 'error' => $error]);
     }
 
     private function initHttpClient() {
@@ -105,6 +108,7 @@ class LoginController extends NoPowerController {
     public function actionResetpassword($activation = '', $user_id = '') {
         $this->pageTitle = '忘记密码';
         $page = 'first';
+        $error = '';
         $email = '';
         if ($activation && $user_id) {
             $activationData = $this->doActivation(['userId' => $user_id, 'code' => $activation], 200);
@@ -114,9 +118,11 @@ class LoginController extends NoPowerController {
                     $page = 'thrid';
                     $email = $userData['data']['email'];
                 }
+            } else {
+                $error = json_encode($activationData);
             }
         }
-        $this->render('/login/reset', ['page' => $page, 'email' => $email, 'user_id' => $user_id]);
+        $this->render('/login/reset', ['page' => $page, 'email' => $email, 'user_id' => $user_id, 'error' => $error]);
     }
 
     private function getUserInfo($userId) {
