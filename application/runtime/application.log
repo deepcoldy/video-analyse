@@ -807,3 +807,12 @@ Stack trace:
 REQUEST_URI=/object/tags
 HTTP_REFERER=http://localhost:8089/object/detect
 ---
+2017/06/22 09:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:8086/login/index
+---

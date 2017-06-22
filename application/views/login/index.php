@@ -1,410 +1,154 @@
 <style>
-@media screen and (max-width: 1023px) {
-    html,body {
-        font-size : 52%!important ;
-    }
-    .ui-content-con{
-        width: 845px;
-    }
-    .ui-header-con{
-        width: 1024px!important;
-    }
-    .ui-login-con{
-        width: 1024px!important;
-    }
-    .ui-detail-con{
-        width: 1024px!important;
-    }
-    .ui-videoDetail-con{
-        width: 880px!important;
-    }
-    .ui-video-detail-video{
-        width: 620px!important;
-    }
-    .ui-video-detail-video video{
-        width: 620px!important;
-    }
-    .ui-detail-con{
-        margin-left: 10.73333rem!important;
-    }
-    .ui-login-left-bg{
-        background: url("../images/login_left_bg.png") no-repeat 18rem 10.66667rem !important;
-        background-size: 65%!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 6.66667rem!important;
-    }
-    .ui-web-tings-icon {
-        height: 2.21429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 2.28889rem!important;
-    }
+* { box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+html, body, div, ul, ol, li, dl, dd, dt, p, span, strong, table, tr, td, th, form, input, textarea, select, h1, h2, h3, h4, h5 { padding: 0; margin: 0; box-sizing: border-box; }
+html {width: 100%; height: 100%;}
+html,body {width: 100%; height: 100%; line-height: 1; margin: 0 auto!important;}
+img{width: 100%}
+a { color: #55cbff; text-decoration: none }
+ul { list-style: none; }
+body{
+    /*background: #1486d5;
+    background-size:3rem 100%;
+    background-repeat:no-repeat;
+    background-clip: 3rem;*/
 }
-@media screen and (min-width: 1024px) {
-    html,body {
-        font-size : 45%!important ;
-    }
-    .ui-detail-con{
-        margin-left: 10.73333rem!important;
-    }
-    .ui-login-left-bg{
-        background: url("../images/login_left_bg.png") no-repeat 18rem 10.66667rem !important;
-        background-size: 65%!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 6.66667rem!important;
-    }
-    .ui-web-tings-icon {
-        height: 2.21429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 2.28889rem!important;
-    }
-    .ui-video-detail-video{
-        width: 620px!important;
-    }
-    .ui-video-detail-video video{
-        width: 620px!important;
-    }
-}
-@media screen and (min-width: 1280px) {
-    html,body {
-        font-size : 63%!important ;
-    }
-    .ui-detail-con{
-        margin-left: 11.73333rem!important;
-    }
-    .ui-login-left-bg{
-        background: url("../images/login_left_bg.png") no-repeat 18rem 12.66667rem !important;
-        background-size: 65%!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 10.66667rem!important;
-    }
-    .ui-video-detail-video{
-        width: 90%!important;
-    }
-    .ui-video-detail-video video{
-        width: 100%!important;
-    }
-    .ui-web-tings-icon {
-        height: 3.71429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 4.58889rem!important;
-    }
-}
-
-@media screen and (min-width: 1366px) {
-    html,body {
-        font-size : 73%!important ;
-    }
-    .ui-detail-con{
-        margin-left: 12.93333rem!important;
-    }
-    .ui-login-left-bg{
-        background: url("../images/login_left_bg.png") no-repeat 18rem 12.66667rem !important;
-        background-size: 65%!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 13.66667rem!important;
-    }
-    .ui-web-tings-icon {
-        height: 4.21429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 3.28889rem!important;
-    }
-    .ui-web-tings-icon {
-        height: 4.51429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 4.58889rem!important;
-    }
-}
-@media screen and (min-width: 1440px) {
-    html,body {
-        font-size : 81%!important ;
-    }
-    .ui-detail-con{
-        margin-left: 13.43333rem!important;
-    }
-    .ui-login-left-bg{
-        background: url("../images/login_left_bg.png") no-repeat 18rem 12.66667rem !important;
-        background-size: 65%!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 13.66667rem!important;
-    }
-    .ui-web-tings-icon {
-        height: 5.01429rem!important;
-    }
-    .ui-video-detail-depth p{
-        line-height: 5.08889rem!important;
-    }
-}
-@media screen and (min-width: 1680px) {
-    html,body {
-        font-size : 91%!important ;
-    }
-    .ui-detail-con{
-        margin-left: 12.73333rem!important;
-    }
-    .ui-login-form{
-        position:relative;
-        margin-top: 13.66667rem!important;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    html,body {
-        font-size : 109%!important ;
-    }
-
-}
-.ui-login-con{
-    width: 100%;
-    height: 100%;
-    background: url("../images/login_bg.png") no-repeat center ;
-    background-size: 61.11111rem;
-}
-
-.ui-login-left,.ui-login-right{
-    display: inline-block;
-}
-.ui-login-left{
-    width: 48%;
-}
-.ui-login-right{
-    width: 45%;
-    vertical-align: top;
-}
-.ui-login-left-bg{
-    background: url("../images/login_left_bg.png") no-repeat 18rem 16.66667rem ;
-    height: 100%;
-    background-size: 65%;
-}
-.ui-login-form{
-    width: 22.22222rem;
+.outer{
+    min-width: 800px;
     margin: 0 auto;
-    height: auto;
-    margin-top: 16.66667rem;
+}
+.banner{
+    min-width: 800px;
+    width:100%;
+}
+.box{
     position: relative;
+    background-color: #ffffff;
+    width: 40%;
+    margin:0 auto;
+    margin-top:-0.5rem;
+    border: 1px solid #cccccc;
 }
-.ui-login-con .ui-web-input{
-    height: 3.22222rem;
-    width: 22.22222rem;
-    padding: 0.71429rem;
-    margin-bottom: 1.07143rem;
-    padding-left: 0;
+.box .logo{
+    width: 0.6rem;
+    display: block;
+    margin: 10px auto;
 }
-.ui-login-con .ui-web-input input{
-    line-height: 1.78571rem;
-    text-indent: .5em;
-    font-size: 1.14286rem;
-}
-
-.ui-procol-des{
-    color: #b2b3b3;
-    font-size: 1rem;
-    width: 100%;
+.box .title{
+    font-size: 0.15rem;
     text-align: center;
-    margin-top: 2.77778rem;
+    color: #666666;
 }
-
-.ui-order-h-des span:not(:last-child){
-    border-right: 1px solid #b2b3b3;
+input{
+    background:none;  
+   outline:none;  
+   border:0px;  
 }
-.ui-web-btn{
-    font-size: 1.11111rem;
-    height: 3.22222rem;
-    line-height: 3.22222rem;
-    width: 22.22222rem;
+.box .line{
+    text-align: center;
 }
-.ui-order-h-des span{
-    padding:0 0.55556rem;
-    height: 1.11111rem;
-    margin: 0.55556rem 0;
+.box .logo_email, .box .logo_password{
+    height: 0.3rem;
+    width: 0.35rem;
 }
-.ui-order-l-des{
-    height: 2.22222rem;
-    line-height: 2.22222rem;
-    font-size: 0.77778rem;
-}
-
-.ui-order-l-des:before,.ui-order-l-des:after{
-    content: "";
-    width: 5rem;
-    height: 0;
-    border-bottom: 1px solid #b2b3b3;
-    position: relative;
+.box .email, .box .password{
+    height: 0.3rem;
+    width: 2rem;
+    margin-left: -4px;
+    padding-left: 6px;
     display: inline-block;
-    top: -0.16667rem;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
 }
-
-.ui-order-l-des:before{
-    left: -0.55556rem;
+.qrcode{
+    height: 0.3rem;
+    width: 0.7rem;
+    border: 1px solid #b3b3b3;
+    text-align: center;
+    margin-right: 0.05rem;
 }
-
-.ui-order-l-des:after{
-    left: 0.55556rem;
+.getVerify{
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.3rem;
+    margin-right: 0.05rem;
 }
-.getVerifyCode {
-    border: 1px solid #666;
-    border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -webkit-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -moz-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -o-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    -mso-border-radius: 0.35714rem 0.35714rem 0.35714rem;
-    line-height: 3.22222rem;
-    width: 100px;
-    text-indent: 1em;
-}
-.getVerify {
-    position: absolute;
-    right: 48px;
-    top: 218px;
-    max-width: 100px;
-}
-#noclear {
-    position: absolute;
-    right: 0;
-    top: 234px;
-    color: #1874CD;
+#noclear{
+    width: 0.9rem;
+    font-size: 0.1rem;
+    text-align: center;
+    display: inline-block;
     cursor: pointer;
 }
-.clickgo {
-    cursor: pointer;
+#noclear a{
+    color: #1295ef;
+}
+.forgot{
+    display: block;
+    width: 2.35rem;
+    margin: 0 auto;
     text-align: right;
-    padding: 10px 0;
-    color: #1874CD;
+    color: #1295ef;
+    font-size: 0.1rem;
 }
-#login_error_msg {
-    position:absolute;
-    top:262px;
-    left:0;
+.submit{ /*提交按钮*/
+    width: 2.35rem;
+    margin: 0 auto;
+    background: #1295ef;
+    text-align: center;
+    color: white;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.1rem;
+    cursor: pointer;
 }
-
-@media screen and (min-width: 1366px) {
-    #login_error_msg {
-        font-size: 12px;
-    }
+.copyright{
+    width: 40%;
+    display: block;
+    margin: 20px auto;
 }
-
-@media screen and (min-width: 1440px) {
-    #noclear {
-        top: 253px;
-    }
-    .getVerify {
-        top: 239px;
-        right: 58px;
-    }
-    #login_error_msg {
-        top:282px;
-        font-size: 13px;
-    }
-}
-
-@media screen and (min-width: 1680px) {
-    #noclear {
-        top: 284px;
-    }
-    .getVerify {
-        top: 272px;
-        right: 65px;
-    }
-    .getVerifyCode  {
-        width: 130px;
-    }
-    #login_error_msg {
-        top:316px;
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    #noclear {
-        top: 338px;
-    }
-    .getVerify {
-        top: 323px;
-        right: 86px;
-        max-width: 124px;
-    }
-    .getVerifyCode  {
-        width: 140px;
-    }
-    #login_error_msg {
-        top:376px;
-        font-size: 16px;
-    }
-}
-.ui-web-btn {
-    line-height: 3.22222rem!important;
-}
-.sk-mask {
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    z-index: 999999999;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-}
-.sk-mask>div {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
+input{font-size: 0.1rem;}
+input,img{vertical-align:middle;}
 </style>
-<link rel="stylesheet" type="text/css" href="http://dressplus.appdevs.cn/css/reset.css">
-<div class="ui-login-con">
-    <div class="ui-login-left">
-        <div class="ui-login-left-bg"></div>
-    </div>
-    <div class="ui-login-right">
-        <div class="ui-login-form">
-            <div class="ui-web-logo"> </div>
-            <div class="ui-web-input">
-                <span class="ui-user-icon ui-com-clearFix"></span>
-                <input data-event="blur>hideError" name="username" placeholder="请输入您的邮箱" type="text"/>
-            </div>
-            <div class="ui-web-input ui-com-clearFix">
-                <span class="ui-lock-icon"></span>
-                <input data-event="blur>hideError" name="password"  placeholder="请输入您的密码" type="password"/>
-            </div>
-            <input type="text" name="yzm" class="getVerifyCode" placeholder="验证码"/>
-            <img class="getVerify" id="verfiy-img"><div id="noclear">换一张</div>
-            <div class="ui-error-con" id="login_error_msg">
-                <span class="ui-error-icon"></span>
-                <span class="ui-error-text">请输入正确的用户名或密码或验证码</span>
-            </div>
-            <div id="resetpassword" class="clickgo">忘记密码</div>
-            <div id="login" class="ui-web-btn">登录</div>
-            <a href="/login/register">
-                <div data-event="register" class="clickgo" style="text-align:center;">立即注册</div>
-            </a>
+<!--<link rel="stylesheet" type="text/css" href="http://dressplus.appdevs.cn/css/reset.css">-->
+<div class="outer">
+    <img src="https://martin-upload.b0.upaiyun.com/web/2017/06/1bf6a913671653e8c035555e2a612129.jpg" alt="" class="banner">
+    <div class="box">
+        <div style="height:0.2rem;"></div>
+        <img class="logo" src="http://dressplus.appdevs.cn/images/dress_logo.png" alt="">
+        <div style="height:0.1rem;"></div>
+        <div class="title">Yi+人工智能技术演示平台</div>
+        <div style="height:0.2rem;"></div>
+        <div class="line">
+            <img class="logo_email" src="https://martin-upload.b0.upaiyun.com/web/2017/06/889c45804cf02a4482475ea09d92cec0.jpg" alt="">
+            <input class="email" name="username" type="text" placeholder="用户名 / 邮箱">
         </div>
-
-        <div class="ui-procol-des">
-            <p class="ui-order-h-des">
-                <span>用户协议</span>
-                <span>内容版权</span>
-            </p>
-            <p class="ui-order-l-des">Copyright @ 2017 Beijing Moshanghua Tech Co., Ltd. All rights reserved</p>
+        <div style="height:0.1rem;"></div>
+        <div class="line">
+            <img class="logo_password" src="https://martin-upload.b0.upaiyun.com/web/2017/06/6710625740f5cab9a459b835632234b4.jpg" alt="">
+            <input class="password" placeholder="密码" name="password" type="password">
         </div>
+        <div style="height:0.1rem;"></div>
+        <div class="line">
+            <input class="qrcode" placeholder="验证码" name="yzm" type="text">
+            <img class="getVerify" id="verfiy-img">
+            <div id="noclear">看不清? <a>换一张</a></div>
+        </div>
+        <div style="height:0.1rem;"></div>
+        <a href="#" id="resetpassword" class="forgot">忘记密码?</a>
+        <div style="height:0.1rem;"></div>
+        <div id="login" class="submit">登录</div>
+        <div style="height:0.1rem;"></div>
+        <a href="/login/register">
+            <div class="forgot" style="text-align:center;">立即注册</div>
+        </a>
+        <div style="height:0.2rem;"></div>
     </div>
+    <div style="height:0.2rem;"></div>    
+    <img class="copyright"
+    src="https://martin-upload.b0.upaiyun.com/web/2017/06/4cfe13e676570c5e4e9e82c1ed548997.jpg" alt="">
 </div>
+
 <div style="position: absolute; left: 0px; top: 0px; z-index: 99999;display: none;" id="loading">﻿
     <div class="sk-mask" data-level="">
         <div class="sk-mask-bg" style="opacity: 0;background-color: #fff; "></div>
@@ -413,3 +157,7 @@
 </div>
 <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="/js/login.js"></script>
+
+<script type="text/javascript">
+    !function(a,b){function c(){var b=f.getBoundingClientRect().width;if(b<800){b=800;}var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+</script>
