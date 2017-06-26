@@ -102,7 +102,6 @@ $(function () {
                         if (res.status == 'ok') {
                             var i = 3;
                             setInterval(function () {
-                                // $('#endtime').text(i)
                                 reset.notice('密码重置成功，'+i+'秒后自动跳回登录页');
                                 i--;
                                 if(i == 0){
