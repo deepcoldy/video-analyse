@@ -88,6 +88,7 @@
 			position: absolute;
 			top:40%;
 			right: 330px;
+			color: #666;
 		}
 		.right_header .logout{
 			position: absolute;
@@ -95,7 +96,10 @@
 			width: 40px;
 			top:40%;
 			right: 280px;
+			text-decoration: underline;
+			color: #1295ef;
 			cursor: pointer;
+			z-index: 999;
 		}
 	</style>
 	<div class='right_header'>
