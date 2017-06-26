@@ -837,3 +837,36 @@ Stack trace:
 REQUEST_URI=/index/logout
 HTTP_REFERER=http://localhost:8089/object/tags
 ---
+2017/06/27 01:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefined".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('undefined')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('undefined')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/undefined')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/undefined
+HTTP_REFERER=http://localhost:8086/login/resetpassword
+---
+2017/06/27 01:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "undefined".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('undefined')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('undefined')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/undefined')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/undefined
+HTTP_REFERER=http://localhost:8086/login/resetpassword
+---
+2017/06/27 01:43:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "qq.com".' in /Users/hanshen/iserver/dressplus_test/framework/web/CController.php:483
+Stack trace:
+#0 /Users/hanshen/iserver/dressplus_test/framework/web/CController.php(270): CController->missingAction('qq.com')
+#1 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(282): CController->run('qq.com')
+#2 /Users/hanshen/iserver/dressplus_test/framework/web/CWebApplication.php(141): CWebApplication->runController('login/qq.com')
+#3 /Users/hanshen/iserver/dressplus_test/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/hanshen/iserver/dressplus_test/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/login/qq.com
+HTTP_REFERER=http://localhost:8086/login/resetpassword
+---

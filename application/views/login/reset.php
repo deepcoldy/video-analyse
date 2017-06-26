@@ -69,6 +69,7 @@ input,img{vertical-align:middle;}
     font-weight: 900;
 }
 .secondstep .special{
+    cursor: pointer;
     color: #1295ef;
     text-decoration: underline;
 }
