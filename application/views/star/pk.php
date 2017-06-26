@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default" ng-show="image">
+        <div class="panel panel-default" ng-show="image" ng-cloak>
             <div class="panel-heading">原始数据：</div>
             <div class="panel-body">
                 <json-formatter open="3" json="data"></json-formatter>

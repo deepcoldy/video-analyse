@@ -31,7 +31,7 @@
 </div>
 
 <!-- 检测结果 -->
-<div class='result_div' id='result_div' ng-show="data">
+<div class='result_div' id='result_div' ng-show="data" ng-cloak>
     <img class='result_bg' src='/img/result_bg.png'>
     <div class='result_p'>
         <p class='result_p1'>识别结果</p>
@@ -51,7 +51,7 @@
         <div class="result_botton2"  ngf-select="objectDetect($file)">上传图片</div>
     </div>
 </div>
-<div class='data_div' ng-show="data">
+<div class='data_div' ng-show="data" ng-cloak>
     <div class='data_p'>
         <p class='data_p_title1'>原始数据</p>
         <img src='/img/data_line.png' class='data_line'>
