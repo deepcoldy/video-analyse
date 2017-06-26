@@ -7,10 +7,14 @@
  */
 
 class IndexController extends Controller {
-    
+
     public function actionIndex()
     {
         $this->redirect('/login/index');
     }
-    
+
+    public function actionLogout() {
+        Yii::app()->session->destroy();
+        $this->redirect('/login/index');
+    }
 }

@@ -103,8 +103,8 @@
 		}
 	</style>
 	<div class='right_header'>
-		<div class="email">535372027@qq.com</div>
-		<div class="logout">退出</div>
+		<div class="email"><?php echo Yii::app()->session->get('user_login'); ?></div>
+		<a href="/index/logout" class="logout">退出</a>
 		<img src='/img/bg_header.png'>
 	</div>
 	<div class='right_content' ng-controller="AppCtrl">

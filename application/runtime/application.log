@@ -826,3 +826,14 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/login/reset
 ---
+2017/06/26 22:52:58 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "logout". in /usr/local/var/www/video-analyse/framework/web/CController.php:483
+Stack trace:
+#0 /usr/local/var/www/video-analyse/framework/web/CController.php(270): CController->missingAction('logout')
+#1 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(282): CController->run('logout')
+#2 /usr/local/var/www/video-analyse/framework/web/CWebApplication.php(141): CWebApplication->runController('index/logout')
+#3 /usr/local/var/www/video-analyse/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /usr/local/var/www/video-analyse/public/index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/logout
+HTTP_REFERER=http://localhost:8089/object/tags
+---
