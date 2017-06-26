@@ -56,22 +56,25 @@ input,img{vertical-align:middle;}
 }
 .secondstep {
     width: 40%;
-    margin: 20px auto;
+    margin: 30px auto;
     text-align: center;
     margin-top: 80px;
     font-size: 0.2rem;
     border: 1px solid #b2b2b2;
-    padding: 0.15rem;
+    padding: 0.1rem 0.2rem;
     text-align: left;
 }
 .secondstep .resetaccount{
     font-size: 0.25rem;
+    font-weight: 900;
 }
 .secondstep .special{
     color: #1295ef;
     text-decoration: underline;
 }
-
+.secondstep p{
+    font-size: 0.15rem;
+}
 .thridstep{
     width: 35%;
     margin: 0 auto;

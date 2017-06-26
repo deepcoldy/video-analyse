@@ -83,7 +83,24 @@
 	</div>
 </div>
 <div class="right_div" id='right_div'>
+	<style>
+		.right_header .email{
+			position: absolute;
+			top:40%;
+			right: 330px;
+		}
+		.right_header .logout{
+			position: absolute;
+			font-size: 16px;
+			width: 40px;
+			top:40%;
+			right: 280px;
+			cursor: pointer;
+		}
+	</style>
 	<div class='right_header'>
+		<div class="email">535372027@qq.com</div>
+		<div class="logout">退出</div>
 		<img src='/img/bg_header.png'>
 	</div>
 	<div class='right_content' ng-controller="AppCtrl">

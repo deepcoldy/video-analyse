@@ -11,8 +11,7 @@ input{
     outline:none;
     border:0px;
     font-size: 0.1rem;
-    border-radius: 2px;
-    min-height: 40px;
+    min-height: 30px;
 }
 input,img{vertical-align:middle;}
 .ui-error-con{
