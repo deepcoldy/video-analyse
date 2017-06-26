@@ -100,7 +100,15 @@ $(function () {
                     })
                     .done(function(res) {
                         if (res.status == 'ok') {
-                            reset.notice('密码重置成功，3秒后自动跳回登录页');
+                            var i = 3;
+                            setInterval(function () {
+                                // $('#endtime').text(i)
+                                reset.notice('密码重置成功，'+i+'秒后自动跳回登录页');
+                                i--;
+                                if(i == 0){
+                                    location.href = '/login/index'
+                                }
+                            }, 1000);
                             setTimeout(function () {
                                 location.href = '/login/index'
                             }, 3000);
