@@ -108,9 +108,6 @@ $(function () {
                                     location.href = '/login/index'
                                 }
                             }, 1000);
-                            setTimeout(function () {
-                                location.href = '/login/index'
-                            }, 3000);
                         } else {
                             reset.notice('密码重置失败，请稍后再试');
                         }
