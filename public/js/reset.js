@@ -102,11 +102,11 @@ $(function () {
                         if (res.status == 'ok') {
                             var i = 3;
                             setInterval(function () {
-                                reset.notice('密码重置成功，'+i+'秒后自动跳回登录页');
-                                i--;
                                 if(i == 0){
                                     location.href = '/login/index'
                                 }
+                                reset.notice('密码重置成功，'+i+'秒后自动跳回登录页');
+                                i--;
                             }, 1000);
                         } else {
                             reset.notice('密码重置失败，请稍后再试');
