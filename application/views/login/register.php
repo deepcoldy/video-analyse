@@ -86,7 +86,8 @@ input,img{vertical-align:middle;}
     color: #8C8C8C;
 }
 .have_account .at_once{
-    color: #1295ef;    
+    color: #1295ef;
+    cursor: pointer;
 }
 .copyright{
     width: 40%;
