@@ -18,13 +18,13 @@ class LoginController extends NoPowerController {
         $this->render('/login/index');
     }
 
-    private function doActivation($data, $type = 100) {
+    private function doActivation($data, $type = 200) {
         $this->initHttpClient();
         $response = $this->client->request('post', '/user/activation', [
             'form_params' => [
                 'userId' => $data['userId'],
                 'code' => $data['code'],
-                'registerFrom' => 100,
+                'registerFrom' => 200,
                 'type' => $type
             ]
         ]);
