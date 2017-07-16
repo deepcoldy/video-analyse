@@ -18,7 +18,7 @@ class LoginController extends NoPowerController {
         $this->render('/login/index');
     }
 
-    private function doActivation($data, $type = 200) {
+    private function doActivation($data, $type = 100) {
         $this->initHttpClient();
         $response = $this->client->request('post', '/user/activation', [
             'form_params' => [
@@ -147,7 +147,7 @@ class LoginController extends NoPowerController {
     public function actionResendpass() {
         $request = Yii::app()->request;
         $username = $request->getParam('username');
-        $data = $this->doResetPass(['userName' => $username, 'step' => 100]);
+        $data = $this->doResetPass(['userName' => $username, 'step' => 100, 'registerFrom' => 200]);
         if ($data['status'] == 'SUCCESS') {
             die(json_encode(['status' => 'ok']));
         } else {

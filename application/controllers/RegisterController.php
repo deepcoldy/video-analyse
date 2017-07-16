@@ -35,7 +35,7 @@ class RegisterController extends NoPowerController {
                 'email' => $data['email'],
                 'tel' => $data['phone'],
                 'companyName' => $data['company'],
-                'registerFrom' => 100,
+                'registerFrom' => 200,
                 'password' => $data['password']
                 // 'registerTime' => date('Y-m-d H:i:s'),
                 // 'registerIp' => $_SERVER['REMOTE_ADDR']
